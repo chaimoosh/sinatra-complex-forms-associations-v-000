@@ -10,7 +10,7 @@
   <br></br>
   <p>Choose an existing pet:</p>
   <% Pet.all.each do |pet| %>
-    <input type="checkbox" name="owner[pets_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
+    <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
   <% end %>
   <br>
   <p>and/or, create a new pet:</p>
