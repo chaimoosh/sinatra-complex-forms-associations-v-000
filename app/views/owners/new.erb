@@ -9,12 +9,12 @@
 
   <br></br>
   <p>Choose an existing pet:</p>
-  <% @pets.each do |pet| %>
-    <input type="checkbox" name="owner[pets_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%>
-  </input>
+  <% Pet.all.each do |pet| %>
+    <input type="checkbox" name="owner[pets_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
   <% end %>
   <br>
   <p>and/or, create a new pet:</p>
+  <label>name:</label>
   <input type="text" name="pet[name]" value="" placeholder="Pet Name:">
   <br>
   <input type="submit" value="Create Owner">
